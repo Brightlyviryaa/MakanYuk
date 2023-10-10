@@ -1,0 +1,30 @@
+.navbar-brand {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  color: #ff6928;
+}
+
+.navbar-nav .nav-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ff6928;
+}
+
+.navbar-nav .btn-pill {
+  background-color: #ff6928;
+  color: white;
+}
+
+/* Menggeser tautan navbar ke kanan */
+.navbar-nav {
+  margin-left: auto;
+  gap: 5vw;
+}
+
+/* Gaya untuk tombol Login */
+.navbar-nav .btn-pill {
+  background-color: #ff6928;
+  color: white;
+}
