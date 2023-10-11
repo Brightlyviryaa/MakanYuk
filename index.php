@@ -40,8 +40,8 @@ $hasil = mysqli_query($koneksi, $query);
               style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 16px; color: #FF6928;">Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-pill" href="login.php" 
-              style="background-color: #FF6928; color: white;">Login</a>
+            <a class="nav-link btn btn-pill" href="register.php" 
+              style="background-color: #FF6928; color: white;">Register</a>
           </li>
         </ul>
       </div>
