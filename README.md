@@ -9,3 +9,4 @@ https://www.figma.com/file/HMUUl5XVRBK23uAbDjcpNE/MakanYuk!?type=design&node-id=
 
 - Commit Message harus sesuai dengan apa yang di ubah, jangan ngaco.
 - Tolong komunikasikan di group kalian lagi mau mulai kerjain bagian mana dan kalo sudah selesi komunikasikan lagi bahwa sudah selesai dan sudah di commit
+- Harus di commit
