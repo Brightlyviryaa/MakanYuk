@@ -1,3 +1,11 @@
+<?php
+$koneksi = mysqli_connect("localhost","root","","makanyuk");
+
+$query = "SELECT * FROM login";
+
+$hasil = mysqli_query($koneksi, $query);
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -32,7 +40,8 @@
               style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 16px; color: #FF6928;">Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-pill" href="#" style="background-color: #FF6928; color: white;">Login</a>
+            <a class="nav-link btn btn-pill" href="login.php" 
+              style="background-color: #FF6928; color: white;">Login</a>
           </li>
         </ul>
       </div>
