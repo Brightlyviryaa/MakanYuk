@@ -20,7 +20,6 @@
 /* Menggeser tautan navbar ke kanan */
 .navbar-nav {
   margin-left: auto;
-  gap: 5vw;
 }
 
 /* Gaya untuk tombol Login */
