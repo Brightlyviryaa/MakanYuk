@@ -85,7 +85,7 @@
     <div class="row align-items-center">
       <div class="col-md-6 text-content">
         <h1>Pesan dari rumah via delivery</h1>
-        <a href="#" class="btn btn-custom mt-3">Daftar sekarang</a>
+        <a href="register.php" class="btn btn-custom mt-3">Daftar sekarang</a>
       </div>
       <div class="col-md-6 illustration-content">
         <img src="./images/OBJECT.png" alt="illustration" class="img-fluid illustration">
