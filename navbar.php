@@ -18,9 +18,20 @@
                     <a class="nav-link" href="#"
                         style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 16px; color: #FF6928;">Menu</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link btn btn-pill" href="#" style="background-color: #FF6928; color: white;">Login</a>
-                </li>
+                <?php
+                session_start();
+                if (isset($_SESSION['user_id'])) {
+                    // Jika pengguna sudah login, tampilkan tombol Log Out
+                    echo '<li class="nav-item">
+                            <a class="nav-link btn btn-pill" href="logout.php" style="background-color: #FF6928; color: white;">Log Out</a>
+                          </li>';
+                } else {
+                    // Jika pengguna belum login, tampilkan tombol Login
+                    echo '<li class="nav-item">
+                            <a class="nav-link btn btn-pill" href="login.php" style="background-color: #FF6928; color: white;">Login</a>
+                          </li>';
+                }
+                ?>
             </ul>
         </div>
     </div>
