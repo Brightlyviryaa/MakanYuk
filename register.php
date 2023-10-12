@@ -21,11 +21,11 @@
                     <div class="card-body">
                         <form action="register_process.php" method="POST">
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="first_name" placeholder="Nama Depan" required>
+                                <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Nama Depan" required>
                                 <label for="first_name">Nama Depan</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="last_name" placeholder="Nama Belakang" required>
+                                <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Nama Belakang" required>
                                 <label for="last_name">Nama Belakang</label>
                             </div>
                             <div class="form-floating mb-3">
@@ -36,17 +36,17 @@
                                 <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                                 <label for="password" class="form-label">Password</label>
                             </div>
-                            <div class="floatingmb-3">
-                                <label for="birthdate" class="form-label">Tanggal Lahir</label>
+                            <div class="form-floating mb-3">
                                 <input type="date" class="form-control" id="birthdate" name="birthdate" required>
+                                <label for="birthdate" class="form-label">Tanggal Lahir</label>
                             </div>
-                            <div class="mb-3">
-                                <label for="gender" class="form-label">Jenis Kelamin</label>
+                            <div class="form-floating mb-3">
                                 <select class="form-select" id="gender" name="gender" required>
                                     <option value="Male">Laki-laki</option>
                                     <option value="Female">Perempuan</option>
                                     <option value="Other">Lainnya</option>
                                 </select>
+                                <label for="gender" class="form-label">Jenis Kelamin</label>
                             </div>
                             <button type="submit" class="btn btn-primary">Daftar</button>
                         </form>
