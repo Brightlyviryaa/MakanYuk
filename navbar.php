@@ -21,7 +21,33 @@
                 <?php
                 session_start();
                 if (isset($_SESSION['user_id'])) {
-                    // Jika pengguna sudah login, tampilkan tombol Log Out
+                    // Cek peran pengguna
+                    if ($_SESSION['role'] == 'admin') {
+                        // Jika pengguna adalah admin, tampilkan menu admin
+                        echo '<li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="adminMenuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Admin Menu
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="adminMenuDropdown">
+                                    <li><a class="dropdown-item" href="tambah_menu.php">Tambah Menu</a></li>
+                                    <li><a class="dropdown-item" href="lihat_user.php">Lihat User</a></li>
+                                    <li><a class="dropdown-item" href="lihat_orderan.php">Lihat Orderan</a></li>
+                                </ul>
+                              </li>';
+                    } elseif ($_SESSION['role'] == 'customer') {
+                        // Jika pengguna adalah customer, tampilkan menu customer
+                        echo '<li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="customerMenuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Customer Menu
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="customerMenuDropdown">
+                                    <li><a class="dropdown-item" href="pesan_menu.php">Pesan</a></li>
+                                    <li><a class="dropdown-item" href="pesanan_saya.php">Pesanan Saya</a></li>
+                                </ul>
+                              </li>';
+                    }
+
+                    // Tampilkan tombol Log Out
                     echo '<li class="nav-item">
                             <a class="nav-link btn btn-pill" href="logout.php" style="background-color: #FF6928; color: white;">Log Out</a>
                           </li>';

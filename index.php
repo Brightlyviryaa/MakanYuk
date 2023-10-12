@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <?= include("navbar.php"); ?>
+  <?= require("navbar.php"); ?>
 
   <div class="container">
     <div id="carouselExampleIndicators" class="carousel slide mt-3 rounded-carousel" data-bs-ride="carousel">
