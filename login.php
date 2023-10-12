@@ -28,7 +28,15 @@
                                 <label for="password" class="form-label">Password</label>
                                 <input type="password" class="form-control" id="password" name="password" required>
                             </div>
-                            <button type="submit" class="btn btn-primary">Login</button>
+                            <div class="mb-3">
+                                <!-- Tampilkan widget reCaptcha di sini -->
+                                <div class="g-recaptcha" data-sitekey="6LeniJcoAAAAANeFdrcKgU6h3zM4PshKZRQMmQtw"></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="loginButton" disabled> Login </button>
+
+                            <!-- Sertakan script JavaScript reCaptcha di bawah ini -->
+                            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
                         </form>
                     </div>
                 </div>
@@ -36,9 +44,7 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <?php require("footer.php"); ?>
 </body>
 
 </html>

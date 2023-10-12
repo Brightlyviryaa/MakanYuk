@@ -15,11 +15,10 @@
                         style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 16px; color: #FF6928;">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"
+                    <a class="nav-link" href="daftar_menu.php"
                         style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 16px; color: #FF6928;">Menu</a>
                 </li>
                 <?php
-                session_start();
                 if (isset($_SESSION['user_id'])) {
                     // Cek peran pengguna
                     if ($_SESSION['role'] == 'Admin') {
@@ -29,9 +28,11 @@
                                     Admin Menu
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="adminMenuDropdown">
-                                    <li><a class="dropdown-item" href="admin/tambah_menu.php">Tambah Menu</a></li>
-                                    <li><a class="dropdown-item" href="admin/lihat_user.php">Lihat User</a></li>
-                                    <li><a class="dropdown-item" href="admin/lihat_orderan.php">Lihat Orderan</a></li>
+                                    <li><a class="dropdown-item" href="dashboard.php">Dashboard</a></li>
+                                    <li><a class="dropdown-item" href="tambah_menu.php">Tambah Menu</a></li>
+                                    <li><a class="dropdown-item" href="lihat_menu.php">Lihat Menu</a></li>
+                                    <li><a class="dropdown-item" href="lihat_user.php">Lihat User</a></li>
+                                    <li><a class="dropdown-item" href="admin_pesanan.php">Lihat Orderan</a></li>
                                 </ul>
                               </li>';
                     } elseif ($_SESSION['role'] == 'Customer') {
@@ -41,7 +42,7 @@
                                     Customer Menu
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="customerMenuDropdown">
-                                    <li><a class="dropdown-item" href="pesan_menu.php">Pesan</a></li>
+                                    <li><a class="dropdown-item" href="pesan.php">Pesan</a></li>
                                     <li><a class="dropdown-item" href="pesanan_saya.php">Pesanan Saya</a></li>
                                 </ul>
                               </li>';

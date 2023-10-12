@@ -1,8 +1,21 @@
 <?php
-// Hapus perintah session_start() di sini jika sudah ada di navbar.php
-require('database.php');
+session_start();
 
-// Cek apakah pengguna sudah login dan perannya adalah admin
+// Periksa apakah pengguna sudah login
+if (!isset($_SESSION['user_id'])) {
+    // Jika belum login, arahkan ke halaman login.php
+    header('Location: login.php');
+    exit();
+}
+
+// Periksa peran pengguna
+if ($_SESSION['role'] != 'Admin') {
+    // Jika peran bukan Admin, arahkan ke halaman login.php
+    header('Location: login.php');
+    exit();
+}
+
+require('database.php');
 
 // Query untuk menghitung total order, total user, dan total menu
 $totalOrders = 0;
@@ -75,9 +88,7 @@ try {
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <?= require("footer.php"); ?>
 </body>
 
 </html>

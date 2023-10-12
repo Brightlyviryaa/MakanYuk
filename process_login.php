@@ -6,6 +6,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
+    // Verifikasi reCaptcha
+    $recaptchaSecretKey = '6LeniJcoAAAAADfHewreV_K9dvTRSaFj8w1Gv3D2'; // Secret key reCaptcha
+    $recaptchaResponse = $_POST['g-recaptcha-response'];
+
+    $recaptchaUrl = 'https://www.google.com/recaptcha/api/siteverify';
+    $recaptchaData = [
+        'secret' => $recaptchaSecretKey,
+        'response' => $recaptchaResponse,
+    ];
+
+    $options = [
+        'http' => [
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => 'POST',
+            'content' => http_build_query($recaptchaData),
+        ],
+    ];
+
+    $context = stream_context_create($options);
+    $recaptchaResult = file_get_contents($recaptchaUrl, false, $context);
+    $recaptchaResult = json_decode($recaptchaResult, true);
+
+    if (!$recaptchaResult['success']) {
+        $error_message = "Verifikasi Captcha gagal. Silakan coba lagi.";
+        header("Location: login.php?error=$error_message");
+        exit();
+    }
+
     try {
         $stmt = $pdo->prepare("SELECT user_id, email, password, role FROM Users WHERE email = ?");
         $stmt->execute([$email]);
@@ -29,7 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: login.php?error=$error_message");
             exit();
         }
-
 
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
