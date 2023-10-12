@@ -20,23 +20,23 @@
                     <div class="card-header">Daftar Akun</div>
                     <div class="card-body">
                         <form action="register_process.php" method="POST">
-                            <div class="mb-3">
-                                <label for="first_name" class="form-label">Nama Depan</label>
-                                <input type="text" class="form-control" id="first_name" name="first_name" required>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="first_name" placeholder="Nama Depan" required>
+                                <label for="first_name">Nama Depan</label>
                             </div>
-                            <div class="mb-3">
-                                <label for="last_name" class="form-label">Nama Belakang</label>
-                                <input type="text" class="form-control" id="last_name" name="last_name" required>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="last_name" placeholder="Nama Belakang" required>
+                                <label for="last_name">Nama Belakang</label>
                             </div>
-                            <div class="mb-3">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
                             </div>
-                            <div class="mb-3">
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                                 <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" required>
                             </div>
-                            <div class="mb-3">
+                            <div class="floatingmb-3">
                                 <label for="birthdate" class="form-label">Tanggal Lahir</label>
                                 <input type="date" class="form-control" id="birthdate" name="birthdate" required>
                             </div>
