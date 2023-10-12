@@ -1,11 +1,3 @@
-<?php
-$koneksi = mysqli_connect("localhost","root","","makanyuk");
-
-$query = "SELECT * FROM login";
-
-$hasil = mysqli_query($koneksi, $query);
-?>
-
 <!DOCTYPE html>
 <html lang="id">
 
@@ -19,67 +11,89 @@ $hasil = mysqli_query($koneksi, $query);
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#"
-        style="font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 24px; color: #FF6928;">
-        MakanYuk
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#"
-              style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 16px; color: #FF6928;">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"
-              style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 16px; color: #FF6928;">Menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link btn btn-pill" href="register.php" 
-              style="background-color: #FF6928; color: white;">Register</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <?= include("navbar.php") ?>
 
-  <div id="carouselExampleIndicators" class="carousel slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
+  <div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide mt-3 rounded-carousel" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/food1.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/food2.jpeg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/food3.jpeg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" ariahidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="./images/food1.png" class="d-block w-100" style="height: 50vh; object-fit: cover;" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="./images/food2.jpeg" class="d-block w-100" style="height: 50vh; object-fit: cover;" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="./images/food3.jpeg" class="d-block w-100" style="height: 50vh; object-fit: cover;" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
 
+  <section class="menu" style="margin-top: 10vh;">
+    <div class="container">
+      <h2 class="text-center">Menu</h2>
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="./images/food1.png" class="card-img-top" style="height: 250px; object-fit: cover;"
+              alt="Menu Item 1">
+            <div class="card-body">
+              <h5 class="card-title">Menu Item 1</h5>
+              <p class="card-text">Description of menu item 1.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="./images/food2.jpeg" class="card-img-top" style="height: 250px; object-fit: cover;"
+              alt="Menu Item 2">
+            <div class="card-body">
+              <h5 class="card-title">Menu Item 2</h5>
+              <p class="card-text">Description of menu item 2.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="./images/food3.jpeg" class="card-img-top" style="height: 250px; object-fit: cover;"
+              alt="Menu Item 3">
+            <div class="card-body">
+              <h5 class="card-title">Menu Item 3</h5>
+              <p class="card-text">Description of menu item 3.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="#" class="btn btn-custom mt-3">View All Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container register-section mt-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-content">
+        <h1>Pesan dari rumah via delivery</h1>
+        <a href="#" class="btn btn-custom mt-3">Daftar sekarang</a>
+      </div>
+      <div class="col-md-6 illustration-content">
+        <img src="./images/OBJECT.png" alt="illustration" class="img-fluid illustration">
+      </div>
+    </div>
+  </section>
+
+  <?= include("footer.php") ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

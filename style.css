@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap");
+
 .navbar-brand {
   font-family: "Poppins", sans-serif;
   font-weight: 900;
@@ -26,4 +28,69 @@
 .navbar-nav .btn-pill {
   background-color: #ff6928;
   color: white;
+}
+
+/* Add custom CSS for the rounded carousel and max-height */
+.rounded-carousel .carousel-inner {
+  border-radius: 25px;
+  max-height: 50vh;
+}
+
+.rounded-carousel .carousel-item {
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.rounded-carousel .carousel-item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* Add custom CSS for the button color */
+.btn-custom {
+  background-color: #ff6928;
+  color: white;
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: #d4541f;
+}
+
+.register-section {
+  display: flex;
+  min-height: 40vh;
+  background-color: #ffa755;
+  border-radius: 1rem;
+  padding: 10vh 5vw;
+}
+
+.text-content {
+  color: white;
+  padding: 20px;
+}
+
+.text-content h1 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* Custom CSS for the image */
+.illustration {
+  max-width: 70%;
+  height: auto;
+}
+
+.illustration-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.row {
+  align-items: center; /* Menyelaraskan elemen secara vertikal */
 }
