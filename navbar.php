@@ -29,15 +29,15 @@
                                     Admin Menu
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="adminMenuDropdown">
-                                    <li><a class="dropdown-item" href="tambah_menu.php">Tambah Menu</a></li>
-                                    <li><a class="dropdown-item" href="lihat_user.php">Lihat User</a></li>
-                                    <li><a class="dropdown-item" href="lihat_orderan.php">Lihat Orderan</a></li>
+                                    <li><a class="dropdown-item" href="admin/tambah_menu.php">Tambah Menu</a></li>
+                                    <li><a class="dropdown-item" href="admin/lihat_user.php">Lihat User</a></li>
+                                    <li><a class="dropdown-item" href="admin/lihat_orderan.php">Lihat Orderan</a></li>
                                 </ul>
                               </li>';
                     } elseif ($_SESSION['role'] == 'Customer') {
                         // Jika pengguna adalah customer, tampilkan menu customer
                         echo '<li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="customerMenuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" id="customerMenuDropdown" role= "button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Customer Menu
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="customerMenuDropdown">
@@ -49,7 +49,7 @@
 
                     // Tampilkan tombol Log Out
                     echo '<li class="nav-item">
-                            <a class="nav-link btn btn-pill" href="logout.php" style="background-color: #FF6928; color: white;">Log Out</a>
+                            <a class="nav-link btn btn-pill" href="/Makanyuk/logout.php" style="background-color: #FF6928; color: white;">Log Out</a>
                           </li>';
                 } else {
                     // Jika pengguna belum login, tampilkan tombol Login

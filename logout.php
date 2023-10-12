@@ -1,5 +1,5 @@
 <?php
-session_start();
+require("session_starter.php");
 
 // Hapus semua data sesi
 session_unset();
