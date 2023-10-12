@@ -21,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: login.php?error=$error_message");
             exit();
         }
+
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
     }

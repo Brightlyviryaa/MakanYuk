@@ -22,7 +22,7 @@
                 session_start();
                 if (isset($_SESSION['user_id'])) {
                     // Cek peran pengguna
-                    if ($_SESSION['role'] == 'admin') {
+                    if ($_SESSION['role'] == 'Admin') {
                         // Jika pengguna adalah admin, tampilkan menu admin
                         echo '<li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="adminMenuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -34,7 +34,7 @@
                                     <li><a class="dropdown-item" href="lihat_orderan.php">Lihat Orderan</a></li>
                                 </ul>
                               </li>';
-                    } elseif ($_SESSION['role'] == 'customer') {
+                    } elseif ($_SESSION['role'] == 'Customer') {
                         // Jika pengguna adalah customer, tampilkan menu customer
                         echo '<li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="customerMenuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
