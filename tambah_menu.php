@@ -20,13 +20,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Penanganan gambar
     if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
         $image = $_FILES['image']['name'];
-        $imagePath = 'images/' . $image;
+        $imagePath = './Images/' . $image;
 
         // Nama gambar produk yang baru (tanpa spasi)
         $imageNameWithoutSpaces = str_replace(' ', '_', $menuName);
 
         // Gabungkan nama gambar baru dengan ekstensi gambar
-        $imagePath = 'images/' . $imageNameWithoutSpaces . '.' . pathinfo($imagePath, PATHINFO_EXTENSION);
+        $imagePath = './Images/' . $imageNameWithoutSpaces . '.' . pathinfo($imagePath, PATHINFO_EXTENSION);
 
         move_uploaded_file($_FILES['image']['tmp_name'], $imagePath);
     } else {

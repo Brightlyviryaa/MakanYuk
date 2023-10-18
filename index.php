@@ -27,13 +27,13 @@ $menus = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div id="carouselExampleIndicators" class="carousel slide mt-3 rounded-carousel" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./images/food1.png" class="d-block w-100" alt="...">
+          <img src="./Images/food1.png" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="./images/food2.jpeg" class="d-block w-100" alt="...">
+          <img src="./Images/food2.jpeg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="./images/food3.jpeg" class="d-block w-100" alt="...">
+          <img src="./Images/food3.jpeg" class="d-block w-100" alt="...">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
@@ -85,7 +85,7 @@ $menus = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <a href="register.php" class="btn btn-custom mt-3">Daftar sekarang</a>
       </div>
       <div class="col-md-6 illustration-content">
-        <img src="./images/OBJECT.png" alt="illustration" class="img-fluid illustration">
+        <img src="./Images/OBJECT.png" alt="illustration" class="img-fluid illustration">
       </div>
     </div>
   </section>

@@ -50,7 +50,7 @@
 
                     // Tampilkan tombol Log Out
                     echo '<li class="nav-item">
-                            <a class="nav-link btn btn-pill" href="/Makanyuk/logout.php" style="background-color: #FF6928; color: white;">Log Out</a>
+                            <a class="nav-link btn btn-pill" href="logout.php" style="background-color: #FF6928; color: white;">Log Out</a>
                           </li>';
                 } else {
                     // Jika pengguna belum login, tampilkan tombol Login

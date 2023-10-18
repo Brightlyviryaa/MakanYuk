@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $image_name = strtolower($image_name); // Konversi ke huruf kecil
         $image_name .= '.jpg'; // Menambahkan ekstensi gambar (misalnya, jpg)
 
-        $image_path = 'images/' . $image_name; // Perhatikan penggunaan path
+        $image_path = './Images/' . $image_name; // Perhatikan penggunaan path
         move_uploaded_file($_FILES['image']['tmp_name'], $image_path);
 
         $image_url = $image_path;
